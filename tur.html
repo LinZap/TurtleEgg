@@ -357,15 +357,16 @@
 		color: #555;
 		font-weight: normal;
 	}
-	.mygride i{
+	.mygridebox{
+		margin-top: 70px;
+	}
+	a .mygride {
 		color: #333;
 		opacity:0.7;
 		filter:Alpha(opacity=70);
-		width: 70px; 
-		margin-top: 70px;
-
+		width: 70px; 	
 	}
-	.mygride i:hover{
+	 a .mygride :hover{
 		opacity:1;
 		filter:Alpha(opacity=100); 
 
@@ -383,7 +384,7 @@
 	<a href="https://twitter.com/soldierzx0705"><i class="fa fa-twitter-square fa-3x myicon"> </i></a>
 	<a href="https://plus.google.com/u/0/111699761174070340943/"><i class="fa fa-google-plus-square fa-3x myicon"> </i> </a>
 	<a href="https://www.youtube.com/watch?v=I4AGSbJ-asQ"><i class="fa fa-youtube-play fa-3x myicon"> </i></a> 
-	<i class="fa fa-github fa-3x myicon"> </i> 
+	<a href="https://github.com/LinZap/tuttleegg/"><i class="fa fa-github fa-3x myicon"> </i> </a>
 	</div>
 	<div id="bub_start"></div>
 
@@ -477,10 +478,11 @@
 		 <div id="myself_hint">
 		 	,currently studying at CJCU <br> ,Department of information management 
 		 </div>
-		 <div class="mygride">	
-		 <a href="https://www.facebook.com/demonzap"><i class="fa fa-facebook-square fa-4x myicon"> </i></a> 
-	<a href="https://plus.google.com/u/0/113481945478509589377"><i class="fa fa-google-plus-square fa-4x myicon"> </i> </a>
-	<a href="https://github.com/LinZap"><i class="fa fa-github fa-4x myicon"> </i></a></div>
+		 <div class="mygridebox">	
+		 <a href="https://www.facebook.com/demonzap"><i class="fa fa-facebook-square fa-4x mygride"> </i></a> 
+	<a href="https://plus.google.com/u/0/113481945478509589377"><i class="fa fa-google-plus-square fa-4x mygride"> </i> </a>
+	<a href="https://github.com/LinZap"><i class="fa fa-github fa-4x mygride"> </i></a>
+	</div>
 			
 	</div>
 
@@ -560,7 +562,7 @@ $(function(){
 			    TweenMax.fromTo( $('#myself_hint'),0.5, {opacity:0},{opacity:1}),
 			    ])
 			    .append([
-			    TweenMax.fromTo( $('.mygride'),0.3, {opacity:0},{opacity:1}),
+			    TweenMax.fromTo( $('.mygridebox'),0.3, {opacity:0},{opacity:1}),
 			    ])
 			    ,300);
 
