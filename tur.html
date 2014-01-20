@@ -1,0 +1,698 @@
+<html>
+<head>
+<title>ROMA</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="font-awesome-4.0.3/css/font-awesome.min.css">
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		font-family: "微軟正黑體";
+	}
+
+	li{	line-height: 28px;}
+
+	.bg{
+		height: 800px;
+		width: 100%;
+		overflow: hidden;
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+
+	}
+	.bg1{
+		background-image: url("img/Flat Ocean.jpg");
+	}
+	.bg2{
+		background-image: url("img/oction.fw.png");
+	}
+	.bg3{
+		background-image: url("img/ocean-life.jpg");
+		height: 1100px;		
+	}
+	.bg4{
+		background-repeat: repeat;
+		background-image: url("img/grid.png");
+	}
+	.title{
+		position: relative;
+		margin-top: 2.5em;
+		font-size: 82px;
+		font-weight: bold;
+		color: #022C5C;
+		text-align: center;
+		
+	}
+	.title_big{
+		background-color: #022C5C;
+		color: #fff;
+	}
+	.title_hint{
+		margin-top: 10px;
+		font-size: 18px;
+		font-weight: normal;
+
+	}
+	.guide_bar{
+		position: relative;
+		margin-top: 30px;
+		text-align: center;
+		color: #3E5B71;
+		z-index: 14;		
+	}
+	a .myicon{
+		color: #3E5B71;
+		width: 49px;
+		opacity:0.4;
+		filter:Alpha(opacity=40); /* IE8 and earlier */
+	}
+	a .myicon:hover{
+		opacity:1;
+		filter:Alpha(opacity=100); /* IE8 and earlier */
+		cursor: pointer;
+	}
+	.tur{
+		position: relative;
+		width: 485;
+		height: 239;
+	}
+	#tur{
+		position: relative;
+		top: -320;
+		left: 60%;
+		z-index: 1;
+	}
+	#tur2{
+		position: relative;
+		top: -710px;
+		left: 1600;
+		left: 60%;
+		z-index: 1;
+	}
+
+	#bub_start{
+		
+		width: 50px;
+		height: 50px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 100px;
+
+	}
+	#sea_tween{
+		z-index: 10;
+		text-align: center;
+		color: #fff;
+		background-color: #022C5C;
+		font-size: 20px;
+		position: relative;
+		
+		padding: 10px;
+		width: 180px;
+		margin-top: 180px;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+
+
+	.pin_inter{
+		width: 100%;
+		height: 500px;
+		background-color: #978;
+	}
+
+	.box_inter{
+		width: 600px;
+		height: 300px;
+		background-color: #687;
+		overflow: hidden;
+		margin-left: 10%;
+		margin-top: -3%;
+		position: relative;
+
+		-moz-box-shadow:0px 0px 12px 6px rgba(90%,90%,100%,0.3);
+		-webkit-box-shadow:0px 0px 12px 6px rgba(90%,90%,100%,0.3);
+		box-shadow:0px 0x 12px 6px rgba(90%,90%,100%,0.3);
+
+	}
+	.box_scroll{
+		width: 1800px;
+		height: 300px;
+		position: relative;
+		left: -1200px;
+		
+	}
+	#inter1{
+		background-color: #CCFFFF;
+		float: left;
+		width: 600px;
+		height: 300px;
+	}
+	#inter2{
+		background-color: #FFFFCC;
+		float: left;
+		width: 600px;
+		height: 300px;
+	}
+	#inter3{
+		background-color: #CCCCFF;
+		float: left;
+		width: 600px;
+		height: 300px;
+	}
+	.inter_title{
+		color: #003366;
+		font-size: 40px;
+		border-bottom: solid 1px  #666666;
+		margin-top: 20px;
+		margin-left: 30px;
+		margin-right: 30px;
+		font-weight: bold;
+	}
+	.inter_txt{
+		color: #333333;
+		font-size: 18px;
+		margin-top: 20px;
+		margin-left: 55px;
+		font-weight: normal;
+
+	}
+	.inter_friends{
+		width: 190px;
+		height: 190px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		float: left; 
+		margin-right: 20px;
+		position: relative;
+		overflow: hidden;
+		border: solid 1px #ccc;
+	}
+	.f1{
+		background-image: url("img/f1.png");
+	}
+	.f2{
+		background-image: url("img/f2.png");
+	}
+	.w1{
+		background-image: url("img/w1.png");
+	}
+	.w2{
+		background-image: url("img/w2.png");
+	}
+	.inter_friends_name{
+		position: absolute;
+		left: 0px;
+		bottom: 0px;
+		width: 97%;
+		padding-left: 3%;
+		background-color: #000;
+		color: #FFF;
+		font-size: 22px;
+		
+	}
+	.name_box{
+		width: 100%;
+		height: 100%;
+		opacity:0.7;
+		filter:Alpha(opacity=70); /* IE8 and earlier */
+	}
+	.name_box:hover{
+		opacity:1;
+		filter:Alpha(opacity=100); /* IE8 and earlier */
+	}
+	.pin_over{
+		margin-top: 700px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 200px;
+		font-size: 20px;
+		background-color: #022C5C;
+		color: #FFF;
+		text-align: center;
+		padding: 10px;
+
+	}
+	#pin_over{
+		margin-top: -400px;
+	}
+	.burn_img{
+		position: relative;
+		width: 568px;
+		height: 395px;
+		background-image: url("img/t.jpg");
+		background-repeat: no-repeat;
+	}
+	.burn_img_made{
+		width: 100%;
+		height: 100%;
+		
+		background-image: url("img/made1.png");
+		background-repeat: no-repeat;
+
+		opacity:0;
+		filter:Alpha(opacity=0); 
+	}
+
+	.burn_tit{
+		
+		margin-top: 270px;
+		position: absolute;
+		color: #022C5C;
+		font-size: 80px;
+		font-weight: bold;
+		text-align: center;
+		width: 100%;
+	}
+
+	.burn_img_bone{
+
+		position: absolute;
+		width: 485px;
+		height: 239px;
+		background-image: url("img/bone0.fw.png");
+		background-repeat: no-repeat;
+		z-index: 11;
+		left: 30%;
+		top: 20%;
+		opacity:0;
+		filter:Alpha(opacity=0); 
+	}
+
+	.burn_img_hint{
+		font-size: 22px;
+		color: #666;
+		text-align: center;
+		background-color: #FFCC99;
+		width: 20%;
+		position: absolute;
+		left: 20%;
+		top: 30%;
+		padding: 20px;
+		
+		opacity:0;
+		filter:Alpha(opacity=0); 
+	}
+	.bone_step{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-repeat: no-repeat;
+		left: 0;
+		top: 0;
+		opacity:0;
+		filter:Alpha(opacity=0); 
+		z-index: 12;
+	}
+	#step1{background-image: url("img/bone1.fw.png");}
+	#step2{background-image: url("img/bone2.fw.png");}
+	#step3{background-image: url("img/bone3.fw.png");}
+	#step4{background-image: url("img/bone4.fw.png");}
+	#step5{background-image: url("img/bone5.fw.png");}
+	#step6{background-image: url("img/bone6.fw.png");}
+	#step7{background-image: url("img/bone7.fw.png");}
+	#step8{background-image: url("img/bone8.fw.png");}
+	#step9{background-image: url("img/bone9.fw.png");}
+	#step10{background-image: url("img/bone10.fw.png");}
+	#step11{background-image: url("img/bone11.fw.png");}
+	#step12{background-image: url("img/bone12.fw.png");}
+	#step13{background-image: url("img/bone13.fw.png");}
+	#step14{background-image: url("img/bone14.fw.png");}
+	#step15{background-image: url("img/bone15.fw.png");}
+	#step16{background-image: url("img/bone16.fw.png");}
+	#step17{background-image: url("img/bone17.fw.png");}
+	#step18{background-image: url("img/bone18.fw.png");}
+	#step19{background-image: url("img/tur2.fw.png");}
+	
+	.myself_bg{
+		background-repeat: repeat;
+		background-image: url("img/gp.jpg");
+		width: 100%;
+		height: 1100px;
+	}
+
+	.myself{
+
+		width: 700px;
+		height: 500px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 500px;
+		padding-left: 100px;
+		padding-right: 100px;
+
+	}
+
+	#myself_title{
+		font-size: 80px;
+		color: #222;
+		font-weight: bold;
+	}
+
+	#myself_hint{
+		margin-top: 50px;
+		font-size: 28px;
+		color: #555;
+		font-weight: normal;
+	}
+	.mygride i{
+		color: #333;
+		opacity:0.7;
+		filter:Alpha(opacity=70);
+		width: 70px; 
+		margin-top: 70px;
+
+	}
+	.mygride i:hover{
+		opacity:1;
+		filter:Alpha(opacity=100); 
+
+	}
+</style>
+
+
+</head>
+<body>
+
+<div class="bg bg1" data-stellar-background-ratio="0.3" id="start_tur">
+	<div class="title" ><span class="title_big">蛋龜</span>の生態<br><div class="title_hint">龜！是我的做人，我的作法！</div></div>
+	<div class="guide_bar">
+	<a href="https://www.facebook.com/pages/蛋龜的生態/682321331807784"><i class="fa fa-facebook-square fa-3x myicon"> </i> </a>
+	<a href="https://twitter.com/soldierzx0705"><i class="fa fa-twitter-square fa-3x myicon"> </i></a>
+	<a href="https://plus.google.com/u/0/111699761174070340943/"><i class="fa fa-google-plus-square fa-3x myicon"> </i> </a>
+	<a href="https://www.youtube.com/watch?v=I4AGSbJ-asQ"><i class="fa fa-youtube-play fa-3x myicon"> </i></a> 
+	<i class="fa fa-github fa-3x myicon"> </i> 
+	</div>
+	<div id="bub_start"></div>
+
+	<img src="img/tortoise.fw.png" id="tur">
+</div>
+
+<div class="bg bg2" data-stellar-background-ratio="0.5" id="bub_bg" >
+<img src="img/tur2.fw.png" id="tur2">
+<img src="img/tur2.fw.png" id="tur3" class="tur">
+<img src="img/tur2.fw.png" id="tur4" class="tur">
+<img src="img/tur2.fw.png" id="tur5" class="tur">
+<div id="sea_tween">往下捲動<br>告訴你更多<br><i class="fa fa-chevron-down"></i></div>
+</div>
+
+<div class="bg bg3"  id="pin_inter">
+
+	<img src="img/tur2.fw.png" id="tur6" class="tur">
+	<div class="box_inter" id="box_inter">
+		<div class="box_scroll" id="box_scroll">
+
+			<div id="inter1">
+				<div class="inter_title"><i class="fa fa-glass"></i> Works</div>
+			<div class="inter_txt">
+			<div class="inter_friends w1"><div class="name_box"><div class="inter_friends_name">天才小釣手</div></div></div>
+			<div class="inter_friends w2"><div class="name_box"><div class="inter_friends_name">陳圭旦專案經理人</div></div></div>
+			</div>
+			</div>
+
+			<div id="inter2">
+				<div class="inter_title"><i class="fa fa-users"></i> Friends</div>
+			<div class="inter_txt">
+				<div class="inter_friends f1"><div class="name_box"><div class="inter_friends_name">料桑龜</div></div></div>
+				<div class="inter_friends f2"><div class="name_box"><div class="inter_friends_name">銘龜</div></div></div>
+			</div>
+			</div>
+
+			<div id="inter3">
+			<div class="inter_title"><i class="fa fa-male"></i> Profile</div>
+			<div class="inter_txt">
+				<ol style="list-style-type: disc">
+					<li>名稱：蛋龜</li>
+					<li>英文名：Maple Turtle</li>
+					<li>興趣：釣魚、點東西、彈東西、放空</li>
+					<li>最擔心的事：肝指數高、顏面神經失調</li>
+					<li>偶像：阿里山神木</li>
+					<li>至理名言：兼職就會成功！</li>
+				</ol>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div id="pin_over"></div>
+	<div class="pin_over">往下捲動<br>了解蛋龜的誕生！<br><i class="fa fa-chevron-down"></i></div>
+</div>
+
+
+<div class="bg bg4" id="bg_born" data-stellar-background-ratio="0.5">
+
+<div class="burn_tit">蛋龜的誕生</div>
+<div class="burn_img" id="burn_img"><div class="burn_img_made"></div></div>
+<div class="burn_img_hint">透過 Adobe Illustrator 軟體，勾勒出蛋龜的輪廓</div>
+<div class="burn_img_hint">再加以修正，以利於網頁使用！</div>
+
+<div class="burn_img_bone">
+<div class="bone_step" id="step1"></div>
+<div class="bone_step" id="step2"></div>
+<div class="bone_step" id="step3"></div>
+<div class="bone_step" id="step4"></div>
+<div class="bone_step" id="step5"></div>
+<div class="bone_step" id="step6"></div>
+<div class="bone_step" id="step7"></div>
+<div class="bone_step" id="step8"></div>
+<div class="bone_step" id="step9"></div>
+<div class="bone_step" id="step10"></div>
+<div class="bone_step" id="step11"></div>
+<div class="bone_step" id="step12"></div>
+<div class="bone_step" id="step13"></div>
+<div class="bone_step" id="step14"></div>
+<div class="bone_step" id="step15"></div>
+<div class="bone_step" id="step16"></div>
+<div class="bone_step" id="step17"></div>
+<div class="bone_step" id="step18"></div>
+<div class="bone_step" id="step19"></div>
+</div>
+</div>
+
+<div class="myself_bg" data-stellar-background-ratio="0.7" id="myself">
+	
+	<div class="myself">
+		 <div id="myself_title">Design by Zap</div>
+		 <div id="myself_hint">
+		 	,currently studying at CJCU <br> ,Department of information management 
+		 </div>
+		 <div class="mygride">	
+		 <a href="https://www.facebook.com/demonzap"><i class="fa fa-facebook-square fa-4x myicon"> </i></a> 
+	<a href="https://plus.google.com/u/0/113481945478509589377"><i class="fa fa-google-plus-square fa-4x myicon"> </i> </a>
+	<a href="https://github.com/LinZap"><i class="fa fa-github fa-4x myicon"> </i></a></div>
+			
+	</div>
+
+</div>
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.2/TweenMax.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="http://webst.cjcu.edu.tw/~H24971393/js/jquery.superscrollorama.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+
+<script>
+
+$(function(){
+
+	$.stellar({
+		horizontalScrolling: false,
+		verticalOffset: 40
+	});
+
+
+	var controller = $.superscrollorama({
+			triggerAtCenter: false,
+			playoutAnimations: true,
+			reverse:true
+	});
+
+	controller.addTween('#start_tur', 
+				(new TimelineLite())
+			    .append([
+			     TweenMax.to( $('#tur'),3, {top:550,opacity:0.3}),
+			     TweenMax.to( $('#tur2'),2.5, {top: 0,left:"+=50",scaleX:0.9,scaleY:0.8,rotation:20}),
+			    ])
+			     .append([
+			     TweenMax.to( $('#tur2'),4, {top:700,scaleX:0.2,scaleY:0.2,opacity:0,left:200,rotation:-20})
+			    ])
+			    , 1400);
+
+	controller.addTween('#bub_start', 
+				(new TimelineLite())
+			    .append([
+			    TweenMax.fromTo( $('#tur4'),2.5, {top:-1020,left:1000,scaleX:0.8,scaleY:0.8,rotation:20},{top: 500,left:0,scaleX:0.3,scaleY:0.3,rotation:-35,opacity:0.3}),
+			   	TweenMax.fromTo( $('#tur5'),2.5, {top:-1080,left:1600,scaleX:0.8,scaleY:0.8,rotation:20},{top:500,left:0,scaleX:0.1,scaleY:0.1,rotation:-30,opacity:0.3}),
+			    TweenMax.fromTo( $('#tur3'),2.5, {top:-1060,left:1600,scaleX:0.8,scaleY:0.8,rotation:20},{top: 500,left:0,scaleX:0.2,scaleY:0.2,rotation:-40,opacity:0.3}),
+			    ])
+			     , 1200);
+
+	controller.addTween('#bub_bg', 
+				(new TimelineLite())
+			    .append([
+			    TweenMax.fromTo( $('#sea_tween'),0.5, {scaleX:0,opacity:0,backgroundColor:"#000"},{scaleX:1,opacity:0.9,backgroundColor:"#002B42"}),
+			    ])
+			    ,300);
+
+
+	controller.addTween('#pin_over', 
+				(new TimelineLite())
+			    .append([
+			    TweenMax.fromTo( $('.pin_over'),0.8, {scaleX:0,opacity:0,backgroundColor:"#000"},{scaleX:1,opacity:0.9,backgroundColor:"#002B42"}),
+			    ])
+			    ,400);
+
+	controller.addTween('#pin_over', 
+				(new TimelineLite())
+			    .append([
+			    TweenMax.fromTo( $('.pin_over'),1, {scaleX:0,opacity:0,backgroundColor:"#000"},{scaleX:1,opacity:0.9,backgroundColor:"#002B42"}),
+			    ])
+			    ,400);
+
+	controller.addTween('#myself', 
+				(new TimelineLite())
+			    .append([
+			    TweenMax.fromTo( $('#myself_title'),1, {opacity:0},{opacity:1}),
+			    ])
+			    .append([
+			    TweenMax.fromTo( $('#myself_hint'),0.5, {opacity:0},{opacity:1}),
+			    ])
+			    .append([
+			    TweenMax.fromTo( $('.mygride'),0.3, {opacity:0},{opacity:1}),
+			    ])
+			    ,300);
+
+
+
+
+	controller.pin($('#pin_inter'), 5500, {
+	  anim: (new TimelineLite())
+	    .append([
+	      TweenMax.fromTo($('#tur6'), 3, {left: 2000, top: 200 ,scaleX:2 ,scaleY:2 }, {left: "75%"}),
+	      TweenMax.fromTo($('#box_inter'), 1.5, {opacity:0}, {opacity:1, boxShadow:"0px 0px 19px 7px rgba(255, 255, 255, 0.5)"})
+	    ])
+
+	  	 .append([ 
+	  	 	 TweenMax.to($('#tur6'), 1, {left: "70%"}),
+	  	 	TweenMax.to($('#box_scroll'), 3, {left:"+=600"}),
+	  	 	TweenMax.to($('#box_inter'), 3, {boxShadow:"0px 0px 12px 3px rgba(255, 255, 255, 0.4)"}),
+	  	 	 ])	    
+
+	    .append([
+	      TweenMax.to($('#tur6'), 1, {left: "65%"}),
+	      TweenMax.to($('#box_scroll'), 3, {left:"+=600"}),	  	 
+	  	 TweenMax.to($('#box_inter'), 3, {boxShadow:"0px 0px 20px 15px rgba(255, 255, 255, 0.3)"})
+	  	 ])
+
+	     .append([
+	      TweenMax.to($('#tur6'),3, {left: "60%"}),
+	  	 	TweenMax.to($('#box_inter'), 3, {boxShadow:"0px 0px 12px 3px rgba(255, 255, 255, 0.2)"}),
+	    ])
+
+	    .append([
+	    	TweenMax.to($('#tur6'),3, {left: "55%"}),
+	      TweenMax.to($('#box_inter'),3, {opacity: 0,boxShadow:"0px 0px 16px 7px rgba(255, 255, 255, 0.1)"})
+	    ])
+
+	    .append([
+	    	TweenMax.to($('#tur6'),1, {left: "40%"})
+	    ])
+	   
+	});
+
+
+
+controller.pin($('#bg_born'), 11000, {
+	  anim: (new TimelineLite())
+	   	.append(TweenMax.to($('.burn_tit'), 0.5, {opacity:0}))
+	   
+	    .append([TweenMax.fromTo($('.burn_tit'), 0.5, {opacity:0}, {opacity:100}),
+	    	TweenMax.fromTo($('#burn_img'), 0.5, {opacity:0}, {opacity:100}),
+	    	])
+
+	    .append([
+	      TweenMax.fromTo( $('#burn_img'),1, {scaleX:0.5,scaleY:0.6,rotationX:-60,rotationY:80},{scaleX:1,scaleY:1,rotationX:0,rotationY:0,left:"45%",top:"16%"}),
+	      TweenMax.to($('.burn_tit'), 0.5, {opacity:0}),
+	    ])
+
+	    .append([
+	      TweenMax.to( $('.burn_img_made'),4, {opacity:1}),
+	      TweenMax.fromTo($('.burn_img_hint:eq(0)'), 4 , {opacity:0,scaleX:0.8},{opacity:1,scaleX:1}),
+	    ])
+
+	    .append([
+	      TweenMax.to( $('.burn_img_made'),5, {opacity:0}),	
+	    ])
+
+	    .append([	     
+	      TweenMax.to($('.burn_img_hint:eq(0)'), 0.5 , {opacity:0,scaleX:0.8}),
+	      TweenMax.fromTo($('.burn_img_hint:eq(1)'), 4 ,{opacity:0,scaleX:0.8},{opacity:1,scaleX:1})
+	    ])
+
+	    .append([
+	      TweenMax.to( $('.burn_img_made'),4, {opacity:1})
+	    ])
+	     .append([
+	      TweenMax.to($('.burn_img_hint:eq(1)'), 2 , {opacity:0,scaleX:0.8})
+	    ])
+
+	    .append([
+	       TweenMax.to( $('#burn_img'),1, {scaleX:0.5,scaleY:0.5,rotationX:90,rotationY:50,left:"75%",top:"10%" ,opacity:0}),
+	       TweenMax.to( $('.burn_img_made'),1, {opacity:0}),
+	    ])
+
+	     .append([
+	       TweenMax.fromTo( $('.burn_img_bone'),3, {opacity:0,scaleX:2,scaleY:2}, {opacity:1,scaleX:1,scaleY:1}),
+	    ])
+
+	      .append([TweenMax.to( $('#step1'),1, {opacity:1})])
+	      .append([TweenMax.to( $('#step2'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step1'),1, {opacity:0}))
+	      .append([TweenMax.to( $('#step3'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step2'),1, {opacity:0}))
+	      .append([TweenMax.to( $('#step4'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step3'),1, {opacity:0}))
+	      .append([TweenMax.to( $('#step5'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step4'),1, {opacity:0}))
+	      .append([TweenMax.to( $('#step6'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step5'),1, {opacity:0}))
+	      .append([TweenMax.to( $('#step7'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step6'),1, {opacity:0}))
+	      .append([TweenMax.to( $('#step8'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step7'),1, {opacity:0}))
+	      .append([TweenMax.to( $('#step9'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step8'),1, {opacity:0}))
+	      .append([TweenMax.to( $('#step10'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step9'),1, {opacity:0}))
+	      .append([TweenMax.to( $('#step11'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step10'),1, {opacity:0}))
+	      .append([TweenMax.to( $('#step12'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step11'),1, {opacity:0}))
+	      .append([TweenMax.to( $('#step13'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step12'),1, {opacity:0}))
+	      .append([TweenMax.to( $('#step14'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step13'),1, {opacity:0}))
+	      .append([TweenMax.to( $('#step15'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step14'),1, {opacity:0}))
+	      .append([TweenMax.to( $('#step16'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step15'),1, {opacity:0}))
+	      .append([TweenMax.to( $('#step17'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step16'),1, {opacity:0}))
+	      .append([TweenMax.to( $('#step18'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step17'),1, {opacity:0}))
+	      .append([TweenMax.to( $('#step19'),1, {opacity:1}),])
+	      .append(TweenMax.to( $('#step18'),1, {opacity:0}))
+	      .append(TweenMax.to( $('.burn_img_bone'),3, {scaleY:2,scaleX:2}))
+	      .append(TweenMax.to( $('.burn_img_bone'),3, {opacity:0}))
+	     	
+});
+
+});	
+</script>
+
+
+
+</body>
+</html>
