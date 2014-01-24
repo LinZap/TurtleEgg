@@ -1,7 +1,8 @@
 <html>
 <head>
-<title>ROMA</title>
+<title>蛋龜的生態</title>
 <meta charset="utf-8">
+<link rel="shortcut icon" href="img/ico.ico"/>
 <link rel="stylesheet" href="font-awesome-4.0.3/css/font-awesome.min.css">
 <style type="text/css">
 	*{
@@ -93,11 +94,12 @@
 
 	#bub_start{
 		
-		width: 50px;
+		width: 100%;
 		height: 50px;
-		margin-left: auto;
-		margin-right: auto;
 		margin-top: 100px;
+		text-align: center;
+		font-size: 22px;
+		color: #022C5C;
 
 	}
 	#sea_tween{
@@ -279,7 +281,24 @@
 		top: 20%;
 		opacity:0;
 		filter:Alpha(opacity=0); 
+		
 	}
+
+	.burn_img_bone:after{
+		font-size: 16px;
+		display: block;
+		content: '往下捲動';
+		color: #666;
+		text-align: center;
+		margin-top: 380px;
+		opacity:0.8;
+		filter:Alpha(opacity=80); 
+		animation: blink 0.9s ease 0s infinite alternate;
+		-webkit-animation: blink 0.9s ease 0s infinite alternate;
+		-ms-animation:blink 0.9s ease 0s infinite alternate;
+		-o-animation: blink 0.9s ease 0s infinite alternate;
+	}
+
 
 	.burn_img_hint{
 		font-size: 22px;
@@ -291,9 +310,9 @@
 		left: 20%;
 		top: 30%;
 		padding: 20px;
-		
 		opacity:0;
 		filter:Alpha(opacity=0); 
+
 	}
 	.bone_step{
 		width: 100%;
@@ -352,13 +371,13 @@
 	}
 
 	#myself_hint{
-		margin-top: 50px;
+		margin-top: 30px;
 		font-size: 28px;
 		color: #555;
 		font-weight: normal;
 	}
 	.mygridebox{
-		margin-top: 70px;
+		margin-top: 30px;
 	}
 	a .mygride {
 		color: #333;
@@ -371,22 +390,95 @@
 		filter:Alpha(opacity=100); 
 
 	}
+	.navbar{
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 100;
+		width: 100%;
+	}
+	.navbar_box{
+
+		width: 440px;
+		margin-left: auto;
+		margin-right: auto;
+		overflow: auto;
+
+		-moz-box-shadow:0px 0px 2px 2px rgba(20%,20%,20%,0.2);
+		-webkit-box-shadow:0px 0px 2px 2px rgba(20%,20%,20%,0.2);
+		box-shadow:0px 0x 2px 2px rgba(20%,20%,20%,0.2);
+
+	}
+	.nav{
+		padding-top: 5px;
+		font-size: 15px;
+		color: #444;
+		float: left;
+		width: 25%;
+		height: 28px;
+		background-color: #CCC;
+		text-align: center;
+		opacity:0.7;
+		filter:Alpha(opacity=70); 
+	}
+	.nav:hover{
+		cursor: pointer;
+		background-color: #336699;
+		opacity:1;
+		filter:Alpha(opacity=100); 
+		color: #fff;
+		font-weight: bold;
+	}
+	.scroll_hint{
+		font-size: 16px;
+		color: #777;
+		text-align: right;
+		margin-right: 30px;
+		margin-top: 5px;
+	}
+
+	@keyframes blink
+	{
+  	from {  color: #777; }
+  	to {  color: #666; }
+	}
+	@-webkit-keyframes blink{
+	from {  color: #777; }
+  	to {  color: #666; }
+	}
+	@-ms-keyframes blink{
+	from {  color: #777; }
+  	to {  color: #666; }
+	}
+	@-o-keyframes blink{
+	from {  color: #777; }
+  	to {  color: #666; }
+	}
+
 </style>
 
 
 </head>
 <body>
+<div class="navbar">
+<div class="navbar_box">
+	<div class="nav">蛋龜生態</div>
+	<div class="nav">蛋龜是誰</div>
+	<div class="nav">蛋龜誕生</div>
+	<div class="nav">關於作者</div>
+</div>
+</div>
 
 <div class="bg bg1" data-stellar-background-ratio="0.3" id="start_tur">
 	<div class="title" ><span class="title_big">蛋龜</span>の生態<br><div class="title_hint">龜！是我的做人，我的作法！</div></div>
 	<div class="guide_bar">
-	<a href="https://www.facebook.com/pages/蛋龜的生態/682321331807784"><i class="fa fa-facebook-square fa-3x myicon"> </i> </a>
-	<a href="https://twitter.com/soldierzx0705"><i class="fa fa-twitter-square fa-3x myicon"> </i></a>
-	<a href="https://plus.google.com/u/0/111699761174070340943/"><i class="fa fa-google-plus-square fa-3x myicon"> </i> </a>
-	<a href="https://www.youtube.com/watch?v=I4AGSbJ-asQ"><i class="fa fa-youtube-play fa-3x myicon"> </i></a> 
-	<a href="https://github.com/LinZap/tuttleegg/"><i class="fa fa-github fa-3x myicon"> </i> </a>
+	<a href="https://www.facebook.com/pages/蛋龜的生態/682321331807784"><i class="fa fa-facebook-square fa-3x myicon"></i></a>
+	<a href="https://twitter.com/soldierzx0705"><i class="fa fa-twitter-square fa-3x myicon"></i></a>
+	<a href="https://plus.google.com/u/0/111699761174070340943/"><i class="fa fa-google-plus-square fa-3x myicon"></i></a>
+	<a href="https://www.youtube.com/watch?v=I4AGSbJ-asQ"><i class="fa fa-youtube-play fa-3x myicon"></i></a> 
+	<a href="https://github.com/LinZap/tuttleegg/"><i class="fa fa-github fa-3x myicon"></i></a>
 	</div>
-	<div id="bub_start"></div>
+	<div id="bub_start"><i class="fa fa-chevron-down"></i></div>
 
 	<img src="img/tortoise.fw.png" id="tur">
 </div>
@@ -432,7 +524,9 @@
 					<li>偶像：阿里山神木</li>
 					<li>至理名言：兼職就會成功！</li>
 				</ol>
+				<div class="scroll_hint"><i class="fa fa-chevron-down"></i>往下捲動</div>
 			</div>
+
 			</div>
 		</div>
 	</div>
@@ -443,7 +537,9 @@
 
 <div class="bg bg4" id="bg_born" data-stellar-background-ratio="0.5">
 
-<div class="burn_tit">蛋龜的誕生</div>
+<div class="burn_tit">蛋龜的誕生
+<div class="title_hint"> 往下捲動<br><i class="fa fa-chevron-down"></i></div>
+</div>
 <div class="burn_img" id="burn_img"><div class="burn_img_made"></div></div>
 <div class="burn_img_hint">透過 Adobe Illustrator 軟體，勾勒出蛋龜的輪廓</div>
 <div class="burn_img_hint">再加以修正，以利於網頁使用！</div>
@@ -478,15 +574,18 @@
 		 <div id="myself_hint">
 		 	,currently studying at CJCU <br> ,Department of information management 
 		 </div>
-		 <div class="mygridebox">	
-		 <a href="https://www.facebook.com/demonzap"><i class="fa fa-facebook-square fa-4x mygride"> </i></a> 
-	<a href="https://plus.google.com/u/0/113481945478509589377"><i class="fa fa-google-plus-square fa-4x mygride"> </i> </a>
-	<a href="https://github.com/LinZap"><i class="fa fa-github fa-4x mygride"> </i></a>
+	<div class="mygridebox">	
+	<a href="https://www.facebook.com/demonzap"><i class="fa fa-facebook-square fa-4x mygride"></i></a>
+	<a href="https://plus.google.com/u/0/113481945478509589377"><i class="fa fa-google-plus-square fa-4x mygride"></i></a>
+	<a href="https://github.com/LinZap"><i class="fa fa-github fa-4x mygride"></i></a>
+	<a href="mailto:soldierzx0705@gmail.com" data-uv-trigger><i class="fa fa-envelope fa-4x mygride"></i></a>
+	
+	</div>		
 	</div>
-			
-	</div>
-
 </div>
+
+
+
 
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.2/TweenMax.min.js"></script>
@@ -494,8 +593,26 @@
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="http://webst.cjcu.edu.tw/~H24971393/js/jquery.superscrollorama.js"></script>
 <script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery-scrollto.js"></script>
+
+<script>(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/6YRzlpzxkwxtAcGH1cjA.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()</script>
+<script>
+UserVoice = window.UserVoice || [];
+UserVoice.push(['showTab', 'classic_widget', {
+  mode: 'feedback',
+  primary_color: '#cc6d00',
+  link_color: '#007dbf',
+  forum_id: 238522,
+  tab_label: 'Feedback',
+  tab_color: '#635fa3',
+  tab_position: 'middle-left',
+  tab_inverted: false
+}]);
+</script>
+
 
 <script>
+
 
 $(function(){
 
@@ -690,8 +807,25 @@ controller.pin($('#bg_born'), 11000, {
 	      .append(TweenMax.to( $('.burn_img_bone'),3, {opacity:0}))
 	     	
 });
+/*
+$(window).scroll(function(){
+	console.log($(this).scrollTop());
+});*/
+$('.nav').click(function(){
+		var d = [0,2000,8300,20400];
+		var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+		$body.animate({
+			scrollTop: d[$(this).index()]
+		}, 1000);
+	});
+
+
 
 });	
+
+
+
+
 </script>
 
 
