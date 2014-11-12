@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <link rel="shortcut icon" href="img/ico.ico"/>
 <link rel="stylesheet" href="font-awesome-4.0.3/css/font-awesome.min.css">
+
 <style type="text/css">
 	*{
 		margin: 0;
@@ -20,18 +21,20 @@
 	li{	line-height: 28px;}
 
 	.bg{
-		height: 800px;
+		/*height: 800px;*/
 		width: 100%;
 		overflow: hidden;
 		background-position: center top;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
+		background-size: cover;
 	}
 	.bg1{
 		background-image: url("img/Flat Ocean.jpg");
 	}
 	.bg2{
 		background-image: url("img/oction.fw.png");
+
 	}
 	.bg3{
 		background-image: url("img/ocean-life.jpg");
@@ -784,14 +787,20 @@ controller.pin($('#bg_born'), 11000, {
 $(window).scroll(function(){
 	console.log($(this).scrollTop());
 });*/
-
+var h = window.screen.availHeight+100;
 $('.nav').click(function(){
-		var d = [0,2000,8300,20400];
+		var d = [0,h*3,h*12+168*0.85,h*27+264*0.85];
 		var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+		var idx = $(this).index();
 		$body.animate({
-			scrollTop: d[$(this).index()]
-		}, 1000);
+			scrollTop: d[idx]
+		}, 1500 );
 	});
+
+
+$('.bg,.pin_inter').css('height', h);
+$('.bg3').css('height', h*2);
+$('.myself_bg').css('height', h*1.5);
 });	
 </script>
 </body>
