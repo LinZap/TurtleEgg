@@ -11,9 +11,7 @@
 
 
 ## Demo
-http://webftpst.cjcu.edu.tw/~H24971393/tur.html
-
-http://zap.comze.com/tuttleegg/tur.html
+http://zaplin.byethost24.com/turtleegg/
 
 　
 　　
